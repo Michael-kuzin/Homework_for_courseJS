@@ -7,9 +7,9 @@ let first;
 let second;
 first = 1;
 second = 2;
-// alert(first,second); цей алерт виведе 1 2
+alert(first,second)
 first = second;
-alert(first,second); // наскільки помню два алерта не можуть працювати в js тому перший закоментував
+alert(first,second);
 
 
 // 4 завдання
@@ -57,4 +57,6 @@ alert(`Шановний ${user} ваш емейл є ${email} ваш парол�
 const secondsInHour = 60 * 60;
 const secondsInDay = secondsInHour * 24;
 const secondsInMonth = secondsInDay * 30;
-console.log(secondsInHour,secondsInDay,secondsInMonth);
+alert(secondsInHour);
+alert(secondsInDay);
+alert(secondsInMonth);
