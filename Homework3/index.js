@@ -100,13 +100,15 @@ function lastElem(arr,number) {
       temp++
       i++
     }
+  }
 
   if(number) {
   return arr2
 } else {
   return arr[arr.length - 1]
+  }
  }
-}
+
 console.log(lastElem([3, 4, 10, -5]));
 console.log(lastElem([3, 4, 10, -5],2));
 console.log(lastElem([3, 4, 10, -5],8));
