@@ -1,18 +1,18 @@
 // 1 завдання
 
-// let myExternalWindow = window.open("", "", "width=300,height=300");
-//
-// setTimeout(function () {
-//   myExternalWindow.resizeTo((width = 500), (height = 500));
-// }, 2000);
-//
-// setTimeout(function () {
-//   myExternalWindow.moveTo(200, 200);
-// }, 2000);
-//
-// setTimeout(function () {
-//   myExternalWindow.close();
-// }, 2000);
+let myExternalWindow = window.open("", "", "width=300,height=300");
+
+setTimeout(function () {
+  myExternalWindow.resizeTo((width = 500), (height = 500));
+}, 2000);
+
+setTimeout(function () {
+  myExternalWindow.moveTo(200, 200);
+}, 4000);
+
+setTimeout(function () {
+  myExternalWindow.close();
+}, 6000);
 
 
 
