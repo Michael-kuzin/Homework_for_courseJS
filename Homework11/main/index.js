@@ -4,11 +4,11 @@ let os = require('os')
 const path = require('path');
 
 
-http.createServer(function(request, response){
+http.createServer(function(request, response) {
     console.log('listen on port 5000');
     console.log(os.userInfo());
-    let filename = path.basename('JS/ Homework_for_courseJS/ Homework11/ main/index.js');
-    let dirname = path.dirname('D:/main/index.js');
+    let filename = path.basename(__filename);
+    let dirname = path.dirname(__dirname);
     let sec = os.uptime();
     let min = sec / 60;
     min = Math.floor(min);
