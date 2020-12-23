@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- 1 Task -->
+    <!-- <button onclick="changeButton()" id="butn">Vote!</button>
+    <script>
+      function changeButton() {
+      let xhr = new XMLHttpRequest();
+
+      xhr.open('GET','index.html',true);
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return
+
+        if(xhr.status != 200) {
+          alert('Error ' + xhr.status + ': ' + xhr.statusText)
+        } else {
+          let time = new Date()
+          document.getElementById('butn').innerHTML = `Your vote is accept:${time}`
+        }
+      }
+      xhr.send()
+    }
+
+    </script> -->
+
+    <!-- 2 Task -->
+    <button onclick="downloadBooks()" id="butn">download books</button>
+    <ul class="List">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <script>
+    function downloadBooks() {
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "books.json", true);
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState != 4) return;
+
+      if (xhr.status != 200) {
+        alert("Error " + xhr.status + ": " + xhr.statusText);
+      } else {
+        let list = document.getElementsByClassName("List");
+        let books = JSON.parse(xhr.responseText);
+        list[0].firstElementChild.innerHTML = books[0].author;
+        list[0].firstElementChild.nextElementSibling.innerHTML = books[1].author;
+        list[0].lastElementChild.previousElementSibling.innerHTML =
+          books[2].author;
+        list[0].lastElementChild.innerHTML = books[3].author;
+        let button = document.getElementById("butn");
+        button.style.display = "none";
+      }
+    };
+    xhr.send();
+  }
+
+    </script>
+  </body>
+</html>
